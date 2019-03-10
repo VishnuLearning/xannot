@@ -1,0 +1,30 @@
+<div class="form-container" *ngIf="data && data.meta">
+  <table>
+
+    <tr>
+      <td>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Patient ID" [(ngModel)]="data.meta.patientId">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput type="date" placeholder="Date Taken" [(ngModel)]="data.meta.dateTaken">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput type="number" placeholder="age" min="1" max="100" [(ngModel)]="data.meta.age">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-select placeholder="Gender" [(ngModel)]="data.meta.gender">
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,171 @@
+
+#annotation-board {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#board {
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.loading-container {
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    position: absolute;
+    z-index:100;
+}
+
+mat-spinner {
+    width:100px;
+    height:100px;
+    margin:auto;
+    margin-top:10%;
+}
+
+.thumb-container{
+    padding:5px;
+    background-color:#333333;
+    color:#666666;
+}
+
+.thumb-placeholder {
+    text-align: center;
+    position:absolute;
+    width:100%;
+    height:100%;
+    line-height: 120px;
+}
+
+.visible-true {
+    display:block;
+}
+
+.visible-false {
+    display:none;
+}
+
+.details {
+    width:100%;
+    position: relative;
+    padding-top:20px;
+}
+#overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: rgb(0,0,0,0.5);
+}
+
+.thumb-img {
+    width:150px;
+    height:90px;
+    object-fit: cover;
+    box-shadow: 1px 1px;
+}
+
+.thumb-title {
+    position: absolute;
+    color: orange;
+    text-align: center;
+    display: block;
+    top: 0px;
+    line-height: 90px;
+    width: 150px;
+    pointer-events:none;
+}
+
+
+.thumb-img:hover {
+    border: 1px dotted orange;
+}
+
+.selected-false {
+    border: 1px solid lightgray;
+}
+
+.annotated-true {
+    border: 1px solid lightgreen;
+}
+
+.annotated-false {
+    border: 1px solid lightgray;
+}
+
+.selected-true {
+    border: 2px solid yellow;
+}
+
+
+.thumbnail-viewport {
+    height: 100%;
+    width: 175px;
+}
+
+.thumbnail-viewport .cdk-virtual-scroll-content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+.thumbnail {
+  width: 100%;
+  height: 90px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.annotationlist-container {
+    overflow-y: auto;
+}
+
+.savebtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.main-container {
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    background-color: #333333;
+    overflow: hidden;
+}
+
+.openfolderbtn {
+    position:absolute;
+    right:40px;
+    bottom:20px;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.rotate-true {
+    animation: rotating 200ms linear infinite;
+}
+
+.rotate-false {
+    animation: none;
+}
+
+.openrotate-true {
+    animation: rotating 1s linear infinite;
+}
+
+.openrotate-false {
+    animation: none;
+}

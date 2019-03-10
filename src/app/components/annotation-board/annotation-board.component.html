@@ -1,0 +1,20 @@
+<div id="groupcontainer" #boardcontainer>
+     <img #image src="{{imagesource}}" id="stagedImage" (load)="setextents()">
+     <div #container id="board-container" (mouseenter)="onMouseenter($event)" (mouseleave)="onMouseleave($event)"
+          (mousemove)="onMousemove($event)" (mousedown)="onMousedown($event)" (mouseup)="onMouseup($event)">
+          <div #scratchpad id="scratchpad" [style.visibility]="scratchon" style.top="{{starty}}px"
+               style.left="{{startx}}px" style.width="{{scratchwidth}}px" style.height="{{scratchheight}}px">
+
+          </div>
+          <app-annotation class="annotation" *ngFor="let annotation of annotateddata.annotations; let i = index"
+               [annotation]="annotation" [imageWidth]="width" [imageHeight]="height"
+               (delete)="annotateddata.annotations.splice(i, 1)">
+          </app-annotation>
+     </div>
+     <div class="addbtn animate-{{listen}}"
+          *ngIf="annotateddata && annotateddata.meta && annotateddata.meta.imagelocation!=''">
+          <button mat-mini-fab color="primary">
+               <mat-icon aria-label="Add Annotation" (click)="getNewAnnotation()">add</mat-icon>
+          </button>
+     </div>
+</div>

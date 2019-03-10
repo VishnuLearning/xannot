@@ -1,0 +1,37 @@
+.annotation {
+    position:absolute;
+    color:white;
+    border:1px solid white;
+    transition: 500ms;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 1px 1px black;
+    pointer-events: unset
+}
+
+.caption {
+    margin-left:5px;
+    font-size:0.8em;
+}
+
+button {
+    visibility: hidden;
+    position:absolute;
+    top:3px;
+    transform: scale(0.5);
+    transform-origin: top right;
+}
+.close-btn {
+    right:3px;
+}
+
+.edit-btn {
+    right: 30px;
+}
+
+.annotation:hover {
+    border: 1px solid yellow;
+}
+
+.annotation:hover button {
+    visibility: visible;
+}

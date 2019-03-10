@@ -1,0 +1,10 @@
+<div class="annotation" *ngIf="annotation!=undefined" style.left="{{left}}px" style.top="{{top}}px"
+    style.width="{{width}}px" style.height="{{height}}px">
+    <span class="caption">{{annotation.caption}}</span>
+    <button mat-mini-fab color="warn" class="close-btn">
+        <mat-icon aria-label="Delete Annotation" (click)="remove()">close</mat-icon>
+    </button>
+    <button mat-mini-fab class="edit-btn">
+        <mat-icon aria-label="Edit Annotation" (click)="openDialog()">edit</mat-icon>
+    </button>
+</div>
