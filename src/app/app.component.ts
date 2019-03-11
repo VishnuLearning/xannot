@@ -4,7 +4,6 @@ import { ElectronService } from 'ngx-electron';
 import { AnnotationService } from './services/annotation.service';
 import { MetadataComponent } from './components/metadata/metadata.component';
 import { BehaviorSubject } from 'rxjs';
-import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import { AnnotatedImage } from './models/AnnotatedImage';
 import { MatSnackBar } from '@angular/material';
 
